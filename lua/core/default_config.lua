@@ -27,7 +27,7 @@ M.ui = {
     selected_item_bg = "colored", -- colored / simple
   },
 
-  telescope = { style = "borderless" }, -- borderless / bordered
+  telescope = { style = "bordered" }, -- borderless / bordered
 
   ------------------------------- nvchad_ui modules -----------------------------
   statusline = {
@@ -41,14 +41,14 @@ M.ui = {
   -- lazyload it when there are 1+ buffers
   tabufline = {
     show_numbers = false,
-    enabled = true,
+    enabled = false,
     lazyload = true,
     overriden_modules = nil,
   },
 
   -- nvdash (dashboard)
   nvdash = {
-    load_on_startup = false,
+    load_on_startup = true,
 
     header = {
       "           ▄ ▄                   ",
@@ -72,7 +72,7 @@ M.ui = {
     },
   },
 
-  cheatsheet = { theme = "grid" }, -- simple/grid
+  cheatsheet = { theme = "simple" }, -- simple/grid
 
   lsp = {
     -- show function signatures i.e args as you type
@@ -83,7 +83,7 @@ M.ui = {
   },
 }
 
-M.plugins = "" -- path i.e "custom.plugins", so make custom/plugins.lua file
+M.plugins = "custom.plugins" -- path i.e "custom.plugins", so make custom/plugins.lua file
 
 M.lazy_nvim = require "plugins.configs.lazy_nvim" -- config for lazy.nvim startup options
 
